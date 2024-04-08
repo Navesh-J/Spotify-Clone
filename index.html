@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+
+<body>
+    <div class="wrapper flex bg-black">
+        <div class="left">
+            <div class="home rounded m-1 p-1 bg-grey">
+                <div class="logo"><img class="invert" src="SVGs/logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="SVGs/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="SVGs/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library m-1 p-1 bg-grey rounded">
+                <div class="heading">
+                    <img class="invert" src="SVGs/library.svg" alt="library">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                       
+                    </ul>
+                </div>
+
+
+                <div class="footer">
+                    <div class="legal "><a
+                            href="https://www.spotify.com/in-en/legal/end-user-agreement/"><span>Legal</span></a></div>
+                    <div class="safety"><a
+                            href="https://www.spotify.com/in-en/safetyandprivacy/reporting-content"><span>Safety &
+                                Privacy
+                                Center</span></a></div>
+                    <div class="privacy"><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy
+                                Policy</span></a></div>
+                    <div class="cookies"><a
+                            href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div class="ads"><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About
+                                Ads</span></a>
+                    </div>
+                    <div class="accessibility"><a
+                            href="https://www.spotify.com/in-en/accessibility"><span>Accessibility</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right  m-1 rounded">
+            <div class="header">
+                <div class="navigation">
+                    <button><img class="invert" src="SVGs/navigate_left.svg" alt=""></button>
+                    <button><img class="invert" src="SVGs/navigate_right.svg" alt=""></button>
+                </div>
+                <div class="buttons">
+                    <button class="signup">Sign Up</button>
+                    <button class="login">Log in</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="spotifyPlaylists">
+                    <h2>Spotify Playlists</h2>
+                </div>
+                <div class="cardContainer">
+                    <div class="cards">
+                        <div class="play">
+                            <button><svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img"
+                                    aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg></button>
+                        </div>
+                        <img src="Playlists/lofi.jpeg" alt="Playlist">
+                        <h2>Lofi Chill</h2>
+                        <p>Lazy slow lofi beats for laid-back moments</p>
+                    </div>
+                    <div class="cards">
+                        <div class="play">
+                            <button><svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img"
+                                    aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg></button>
+                        </div>
+                        <img src="Playlists/night.jpeg" alt="">
+                        <h2>Night Rain</h2>
+                        <p>Sleep with sounds of pouring rain and occasional rolling thunder.</p>
+                    </div>
+                </div>
+                <div class="playbar">
+                    <div class="songinfo">
+                        <div class="moving-text"></div>
+                    </div>
+                    <div class="songButtons invert flex">
+                        <button><img id="previous" src="SVGs/previous.svg" alt="previous"></button>
+                        <button class="play-pause"><img id="play" src="SVGs/play.svg" alt="play"></button>
+                        <button><img id="next" src="SVGs/next.svg" alt="next"></button>
+                    </div>
+                    <div class="songtime">
+                        <div class="currentDuration"></div>
+                        <div class="totalDuration"></div>
+                    </div>
+                    <div class="seekbar">
+                        <div class="gola-se-pehle"></div>
+                        <div class="gola"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
