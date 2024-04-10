@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  padding: 0.2rem;
+}
+
+.right {
+  width: 75vw;
+  position: relative;
+}
+
+.home ul li {
+  width: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding-top: 1.6rem;
+}
+
+.logo img {
+  width: 5rem;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem 0;
+  font-size: 0.7rem;
+  align-items: center;
+}
+
+.heading img {
+  width: 1.4rem;
+}
+
+.library {
+  min-height: 67.4vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  font-size: 0.625rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.main {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(128, 128, 128, 0.35) 100%,
+    rgba(3, 2, 2, 0.9417016806722689) 100%
+  );
+  height: 90%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigation img {
+  width: 1rem;
+  cursor: pointer;
+}
+
+.navigation button {
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  align-items: center;
+  background-color: #00000024;
+  height: 3rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 0.6rem 1rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  font-weight: 550;
+  border: none;
+  outline: none;
+}
+
+.signup {
+  background-color: black;
+  color: grey;
+}
+
+.signup:hover {
+  /* font-size: .9rem; */
+  font-weight: 700;
+  color: white;
+}
+
+.login:hover {
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.spotifyPlaylists {
+  padding: 0.8rem;
+  display: inline-block;
+}
+
+.spotifyPlaylists:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  max-height: 63vh;
+  overflow-y: scroll;
+  overflow-y: auto;
+}
+
+.cards {
+  width: 10rem;
+  /* height: 14rem; */
+  /* border: 2px solid red; */
+  cursor: pointer;
+  border-radius: 0.4rem;
+  animation: ease;
+  position: relative;
+}
+
+.cards h2 {
+  margin-left: 1rem;
+}
+
+.cards p {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  color: grey;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.cards img {
+  border-radius: 0.5rem;
+  width: 80%;
+  object-fit: contain;
+  margin: 0.6rem 0 0 1rem;
+}
+
+.cards:hover {
+  transition: all 100ms ease;
+  background-color: #252525;
+}
+
+.play {
+  position: absolute;
+  z-index: 2;
+  top: 6.1rem;
+  right: 1.2rem;
+}
+
+.play button {
+  transition: all 200ms ease-out;
+  background-color: #1db954;
+  border-radius: 50%;
+  width: 2.6rem;
+  height: 2.6rem;
+  /* position: relative; */
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.cards:hover .play button {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.play > button > svg {
+  width: 1.4rem;
+  padding: 0.6rem;
+}
+
+.playbar {
+  position: fixed;
+  bottom: 1.8rem;
+  padding: 0.8rem;
+  background-color: black;
+  /* width: 40rem; */
+  width: 72.5vw;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  /* padding-left: 32rem; */
+}
+
+.playbar button {
+  background: none;
+  border: none;
+}
+
+.songButtons button:hover {
+  cursor: pointer;
+}
+
+.play-pause img {
+  background-color: white;
+  filter: invert(1);
+  border-radius: 50%;
+}
+
+.songButtons {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.seekbar {
+  width: 40%;
+  height: 0.25rem;
+  background-color: #252525;
+  position: absolute;
+  bottom: 0.6rem;
+  /* border: 2px solid white; */
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.gola {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: white;
+  border-radius: 50%;
+  opacity:0;
+  transition: left 300ms;
+  position: relative;
+  left: 0%;
+
+}
+
+.gola:hover {
+  cursor: pointer;
+}
+
+.seekbar:hover .gola {
+  opacity: 1;
+}
+
+.gola-se-pehle{
+  position: absolute;
+  width: 0%;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  transition: all 300ms ;
+}
+
+.seekbar:hover .gola-se-pehle{
+  background-color: #1db954;
+}
+
+.songinfo {
+  position: absolute;
+  left: 1rem;
+  font-weight: 400;
+  height: 1.6rem;
+  width: 25rem;
+  overflow: hidden;
+  /* border: 2px solid red; */
+  white-space: nowrap;
+}
+
+.moving-text {
+  position: absolute;
+  display: inline-block;
+  /* animation: moveText 10s linear infinite; */
+  /* animation-delay: 3s; */
+}
+
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.currentDuration{
+  position: absolute;
+  bottom: 0.1rem;
+  left: 26%;
+  font-size: .8rem;
+}
+
+.totalDuration{
+  position: absolute;
+  bottom: 0.1rem;
+  right: 26%;
+  font-size: 0.8rem;
+}
+
+/* For webkit browsers (Chrome, Safari, etc.) */
+/* Define scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color of the thumb */
+  border-radius: 10px; /* Rounded ends for the thumb */
+}
+
+/* Define scrollbar track when hovering over it */
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Lighter background color on hover */
+}
+
+/* Define scrollbar thumb when hovering over it */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb color on hover */
+}
+
+/* For other browsers */
+/* Define scrollbar track */
+.cardContainer {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #333 rgba(0, 0, 0, 0.2); /* Color of the thumb and track */
+}
+
+/* Define scrollbar thumb */
+.cardContainer::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color of the thumb */
+  border-radius: 10px; /* Rounded ends for the thumb */
+}
+
+/* Define scrollbar track when hovering over it */
+.cardContainer::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Lighter background color on hover */
+}
+
+/* Define scrollbar thumb when hovering over it */
+.cardContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb color on hover */
+}
+
+.songList {
+  max-height: 56vh;
+  overflow: auto;
+}
+
+.songList .info {
+  font-size: 0.7rem;
+  width: 10rem;
+}
+
+.songList ul {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.songList ul li {
+  display: flex;
+  gap: 0.65rem;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  border: 1px solid white;
+  margin: 0.8rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  justify-content: space-around;
+}
+
+.songList ul li:hover {
+  cursor: pointer;
+  background-color: #252525;
+  transition: all 100ms ease;
+}
+
+.playnow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  /* position: absolute;
+    right: 0.8rem; */
+}
+
+.playnow span {
+  font-size: 0.7rem;
+  width: 3.2rem;
+}
+
+.playnow img {
+  border: 1px solid rgb(182, 36, 235);
+  background-color: rgb(182 36 235 / 70%);
+  border-radius: 50%;
+  /* transition: transform 800ms ease; */
+}
+
+.playnow img:hover {
+  /* transform: rotate(360deg); */
+  animation-name: rotateOnce;
+  animation-duration: 1s; /* Adjust as needed */
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateOnce {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
