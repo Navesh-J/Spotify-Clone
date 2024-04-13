@@ -234,6 +234,7 @@ body {
   bottom: 1.8rem;
   padding: 0.8rem;
   background-color: black;
+  /* background-color: palevioletred; */
   /* width: 40rem; */
   width: 72.5vw;
   height: 3rem;
@@ -349,6 +350,13 @@ body {
   right: 26%;
   font-size: 0.8rem;
 }
+
+.volume{
+  position: absolute;
+  right: 10rem;
+  top: 1.8rem;
+}
+
 
 /* For webkit browsers (Chrome, Safari, etc.) */
 /* Define scrollbar track */

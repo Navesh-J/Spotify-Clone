@@ -51,7 +51,7 @@ async function main() {
     .querySelector(".songList")
     .getElementsByTagName("ul")[0];
   for (const song of songs) {
-    let decoded=decodeURIComponent(song);
+    let decoded = decodeURIComponent(song);
     songUL.innerHTML =
       songUL.innerHTML +
       `<li> <img class="invert" src="SVGs/music.svg" alt="Music">
