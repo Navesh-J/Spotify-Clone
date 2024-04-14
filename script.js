@@ -200,6 +200,28 @@ async function main() {
     playMusic(decodeURIComponent(songUrl));
     console.log("Playing:", songUrl);
   }
+
+  //volume
+  const rangeInput = document.querySelector(".range").getElementsByTagName("input")[0];
+  const volumeStep = 7;
+  rangeInput.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const scrollDirection = e.deltaY < 0 ? "up" : "down";
+      if (scrollDirection === "up") {
+          if (parseInt(rangeInput.value) < 100) {
+              rangeInput.value = parseInt(rangeInput.value) + volumeStep;
+              currentsong.volume = parseInt(rangeInput.value) / 100;
+          }
+      } else {
+          if (parseInt(rangeInput.value) > 0) {
+              rangeInput.value = parseInt(rangeInput.value) - volumeStep;
+              currentsong.volume = parseInt(rangeInput.value) / 100;
+          }
+      }
+  });
+  rangeInput.addEventListener("input", (e) => {
+      currentsong.volume = parseInt(e.target.value) / 100;
+  });
 }
 
 main();

@@ -353,9 +353,26 @@ body {
 
 .volume{
   position: absolute;
-  right: 10rem;
-  top: 1.8rem;
+  right: 4rem;
+  display: flex;
+  align-items: center;
 }
+
+.volume>button{
+  position: absolute;
+  top: 0.5rem;
+  left: -2rem;
+}
+
+.range>input{
+  height:0.25rem;
+  cursor: pointer;
+}
+
+.range input[type="range"] {
+  accent-color:#1db954 ;
+}
+
 
 
 /* For webkit browsers (Chrome, Safari, etc.) */
